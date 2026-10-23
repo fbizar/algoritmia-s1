@@ -21,7 +21,7 @@ Algoritmo que muestra la edad aproximada en días.
 - **Salida**:  Tu edad aproximada en días es: 365
 
 ## Propinas
-Calcula cuando debe pagar cada persona una cuenta de forma equitativa.
+Calcula cuanto debe pagar cada persona una cuenta de forma equitativa.
 #### Prueba 1
 - **Entrada**: 
 1. 150000 (cuenta)
