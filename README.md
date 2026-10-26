@@ -1,8 +1,7 @@
 # algoritmia-s1
 
 Conjunto de algoritmos simples hechos en PSeint.
-## Tests
-### Saludo
+## Saludo
 Solo muestra el nombre del usuario con un mensaje de bienvenida.
 #### Prueba 1
 - **Entrada**: Felipe
@@ -11,7 +10,7 @@ Solo muestra el nombre del usuario con un mensaje de bienvenida.
 - **Entrada**: John
 - **Salida**: Hola, John. Bienvenido a Algoritmia
 
-### Edad en días
+## Edad en días
 Algoritmo que muestra la edad aproximada en días.
 #### Prueba 1
 - **Entrada**: 22
