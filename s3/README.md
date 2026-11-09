@@ -64,7 +64,6 @@ Ejercicios de PSeInt de ciclos.
 | 1               | 1      | 25000 | 2        | 50000 |
 | 2               | 2      | 12000 | 1        | 62000 |
 | 3               | 3      | 0     | -        | 62000 |
-|                 |        |       |          |       |
 
 ---
 ## Árbol de Cajas
