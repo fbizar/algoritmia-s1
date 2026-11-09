@@ -69,3 +69,5 @@ Ejercicios de PSeInt de ciclos.
 ---
 ## Árbol de Cajas
 Árbol de cajas de la página de canal de YouTube.
+
+![alt "Arbol de cajas - YouTube"](YouTube_box-tree.svg)
