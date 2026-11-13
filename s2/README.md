@@ -86,7 +86,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | R2    | Verdadero | Falso       | Edad no válida |
 | R3    | Falso     | Verdadero   | Edad no válida |
 ## Pruebas de escritorio
-### edad = 30
+### edad = 121
 
 |Paso|Instrucción|Variable `edad`|Resultado|
 |---|---|---|---|
