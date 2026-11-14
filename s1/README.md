@@ -1,8 +1,12 @@
-# algoritmia-s1
+# Algoritmia - Sesión 1
+Conjunto de algoritmos simples hechos en PSeint y en lenguaje natural.
 
-Conjunto de algoritmos simples hechos en PSeint.
-## Saludo
+## Retos del video
+Retos del video de moodle sesión 1 con pruebas.
+
+### 1. [Saludo](Saludo.psc)
 Solo muestra el nombre del usuario con un mensaje de bienvenida.
+![Diagrama de Saludo](diagramas/Saludo.png)
 #### Prueba 1
 - **Entrada**: Felipe
 - **Salida**: Hola, Felipe. Bienvenido a Algoritmia
@@ -10,8 +14,9 @@ Solo muestra el nombre del usuario con un mensaje de bienvenida.
 - **Entrada**: John
 - **Salida**: Hola, John. Bienvenido a Algoritmia
 
-## Edad en días
+### 2. [Edad en días](EdadEnDias.psc)
 Algoritmo que muestra la edad aproximada en días.
+![Diagrama de Edad en días](diagramas/EdadEnDias.png)
 #### Prueba 1
 - **Entrada**: 22
 - **Salida**:  Tu edad aproximada en días es: 8030
@@ -19,8 +24,9 @@ Algoritmo que muestra la edad aproximada en días.
 - **Entrada**: 1
 - **Salida**:  Tu edad aproximada en días es: 365
 
-## Propinas
+### 3. [Propinas](Propinas.psc)
 Calcula cuanto debe pagar cada persona una cuenta de forma equitativa.
+![Diagrama de Propinas](diagramas/Propinas.png)
 #### Prueba 1
 - **Entrada**: 
 1. 150000 (cuenta)
@@ -42,8 +48,9 @@ Calcula cuanto debe pagar cada persona una cuenta de forma equitativa.
 2. Total a pagar: $93450
 3. Cada persona debe pagar: $31150
 
-## Promedio Notas
+### 4. [Promedio Notas](PromedioNotas.psc)
 Calcula el promedio de las notas que el usuario ingrese. 
+![Diagrama de Promedio Notas](diagramas/PromedioNotas.png)
 #### Prueba 1
 - **Entrada**: 
 1. 3 (cantidad de notas)
@@ -64,3 +71,6 @@ Calcula el promedio de las notas que el usuario ingrese.
 
 - **Salida**:
 1. El promedio de las notas es: 4.3
+
+### 5. [Tinto](tinto.md)
+Algoritmo de cómo preparar un tinto. Presiona el vínculo (título) para abrirlo.
