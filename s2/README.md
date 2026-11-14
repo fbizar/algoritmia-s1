@@ -1,9 +1,13 @@
-# Algoritmia s2
+# Algoritmia - Sesión 2
 Tablas de decisión y pruebas de escritorio de los algoritmos.
 
-# ValidarRegistro.psc
+## Retos del video
+Algoritmos en PSeInt con tablas de decisión y pruebas de algoritmos.
 
-## Tabla de decisiones
+### 1. [Validar Registro](ValidarRegistro.psc)
+Comprueba que el usuario tiene 14 años o más, y acepta los términos para permitir el registro.
+
+#### Tabla de decisiones
 
 | Regla | Edad >= 14 | Acepta Términos? | Resultado             |
 | ----- | ---------- | ---------------- | --------------------- |
@@ -11,9 +15,9 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | R2    | Verdadero  | Falso            | No puedes registrarte |
 | R3    | Falso      | Verdadero        | No puedes registrarte |
 | R4    | Falso      | Falso            | No puedes registrarte |
-## Pruebas de escritorio
+#### Pruebas de escritorio
 
-###  edad = 20, respuesta = “s”
+#####  edad = 20, respuesta = “s”
 
 |Paso|Instrucción|`edad`|`respuesta`|Resultado|
 |---|---|---|---|---|
@@ -28,7 +32,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |9|Evaluar `"S" == "S"`|20|“S”|Verdadero|
 |10|Verdadero Y Verdadero|20|“S”|**Verdadero**|
 |11|Escribir (rama Si)|20|“S”|Muestra: _Registro exitoso_|
-###  edad = 13, respuesta = “S”
+#####  edad = 13, respuesta = “S”
 
 |Paso|Instrucción|`edad`|`respuesta`|Resultado|
 |---|---|---|---|---|
@@ -44,7 +48,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |10|Falso Y Verdadero|13|“S”|**Falso**|
 |11|Escribir (rama SiNo)|13|“S”|Muestra: _No puedes registrate_|
 
-###  edad = 25, respuesta = “N”
+#####  edad = 25, respuesta = “N”
 
 |Paso|Instrucción|`edad`|`respuesta`|Resultado|
 |---|---|---|---|---|
@@ -59,7 +63,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |9|Evaluar `"N" == "S"`|25|“N”|Falso|
 |10|Verdadero Y Falso|25|“N”|**Falso**|
 |11|Escribir (rama SiNo)|25|“N”|Muestra: _No puedes registrate_|
-### edad = 15, respuesta = “sdkf”
+##### edad = 15, respuesta = “sdkf”
 
 | Paso | Instrucción                                      | `edad`      | `respuesta` | Resultado                       |
 | ---- | ------------------------------------------------ | ----------- | ----------- | ------------------------------- |
@@ -76,17 +80,18 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | 11   | Escribir (rama SiNo)                             | 15          | “SDKF”      | Muestra: _No puedes registrate_ |
 
 ---
-# ValidarEdad.psc
+### 2. [Validar Edad](ValidarEdad.psc)
+Verifica si una edad ingresada está entre 0 y 120 para ser considerada válida.
 
-## Tabla de decisiones
+#### Tabla de decisiones
 
 | Regla | Edad >= 0 | Edad <= 120 | Resultado      |
 | ----- | --------- | ----------- | -------------- |
 | R1    | Verdadero | Verdadero   | Edad válida    |
 | R2    | Verdadero | Falso       | Edad no válida |
 | R3    | Falso     | Verdadero   | Edad no válida |
-## Pruebas de escritorio
-### edad = 121
+#### Pruebas de escritorio
+##### edad = 121
 
 |Paso|Instrucción|Variable `edad`|Resultado|
 |---|---|---|---|
@@ -98,7 +103,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |6|Verdadero Y Falso|121|**Falso**|
 |7|Escribir (rama SiNo)|121|Muestra: _La edad debe ser mayor o igual a 0 y menor igual a 120._|
 
-### edad = 0
+##### edad = 0
 
 |Paso|Instrucción|Variable `edad`|Resultado|
 |---|---|---|---|
@@ -110,7 +115,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |6|Verdadero Y Verdadero|0|**Verdadero**|
 |7|Escribir (rama Si)|0|Muestra: _La edad es válida._|
 
-### edad = 120
+##### edad = 120
 
 | Paso | Instrucción               | Variable `edad` | Resultado                     |
 | ---- | ------------------------- | --------------- | ----------------------------- |
@@ -123,8 +128,10 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | 7    | Escribir (rama Si)        | 120             | Muestra: _La edad es válida._ |
 
 ---
-# Parqueadero.psc
-## Tabla de decisiones
+### 3. [Parqueadero](Parqueadero.psc)
+Algoritmo de una taquilla de parqueadero que calcula el valor según el tipo de vehículo, tiempo estacionado y si contine factura para aplicar un descuento.
+
+#### Tabla de decisiones
 
 | Regla | Tipo     | Minutos           | Factura    | Resultado                                          |
 | ----- | -------- | ----------------- | ---------- | -------------------------------------------------- |
@@ -133,8 +140,8 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | R3    | C / M    | Entre 0 y 15      | Cualquiera | Gratis                                             |
 | R4    | C / M    | Mayor a 15        | No         | Calcula Total = menor_de(tarifa  \*  horas, 30000) |
 | R5    | C / M    | Mayor a  15       | Si         | Igual que R4 pero dividido por 2                   |
-## Pruebas de escritorio
-### tipo = 3
+#### Pruebas de escritorio
+##### tipo = 3
 
 |Paso|Instrucción|`tipo`|Resultado|
 |---|---|---|---|
@@ -147,7 +154,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |7|Escribir (rama Si)|3|Muestra: _El tipo debe ser 1 o 2_|
 |8|Fin|3|No se lee nada más|
 
-### tipo = 1, minutos = -10 
+##### tipo = 1, minutos = -10 
 
 |Paso|Instrucción|`tipo`|`tarifa`|`minutos`|Resultado|
 |---|---|---|---|---|---|
@@ -161,7 +168,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |8|Evaluar `-10 < 0`|1|4000|-10|Verdadero|
 |9|Escribir (rama Si)|1|4000|-10|Muestra: _Los minutos deben ser positivos._|
 
-### tipo = 2, minutos = 15
+##### tipo = 2, minutos = 15
 
 |Paso|Instrucción|`tipo`|`tarifa`|`minutos`|`horas`|`total`|`respuestaFactura`|Resultado|
 |---|---|---|---|---|---|---|---|---|
@@ -179,7 +186,25 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |12|Evaluar `"N" == "S"`|2|2000|15|1|0|“N”|Falso|
 |13|Escribir total|2|2000|15|1|0|“N”|Muestra: _Total a pagar: $0_|
 
-### tipo = 2, minutos = 61
+##### tipo = 1, minutos = 16
+
+| Paso | Instrucción                              | `tipo`      | `tarifa`    | `minutos`   | `horas`     | `total`     | `respuestaFactura` | Resultado                       |
+| ---- | ---------------------------------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------------ | ------------------------------- |
+| 1    | tarifaMaxima = 30000                     | (sin valor) | (sin valor) | (sin valor) | (sin valor) | (sin valor) | (sin valor)        | Se asigna 30000                 |
+| 2    | Leer tipo                                | 1           | (sin valor) | (sin valor) | (sin valor) | (sin valor) | (sin valor)        | Se almacena 1                   |
+| 3    | Evaluar `1 < 1 o 1 > 2`                  | 1           | (sin valor) | (sin valor) | (sin valor) | (sin valor) | (sin valor)        | Falso, pasa al SiNo             |
+| 4    | Segun tipo: caso 1                       | 1           | 4000        | (sin valor) | (sin valor) | (sin valor) | (sin valor)        | tarifa = 4000                   |
+| 5    | Leer minutos                             | 1           | 4000        | 16          | (sin valor) | (sin valor) | (sin valor)        | Se almacena 16                  |
+| 6    | Evaluar `16 < 0`                         | 1           | 4000        | 16          | (sin valor) | (sin valor) | (sin valor)        | Falso, pasa al SiNo             |
+| 7    | horas = trunc((16 + 59)/60) = trunc(1.3) | 1           | 4000        | 16          | 1           | (sin valor) | (sin valor)        | horas = 1                       |
+| 8    | Evaluar `16 <= 15`                       | 1           | 4000        | 16          | 1           | (sin valor) | (sin valor)        | Falso, pasa al SiNo             |
+| 9    | total = 4000 \* 1                        | 1           | 4000        | 16          | 1           | 4000        | (sin valor)        | Se asigna 4000                  |
+| 10   | Escribir pregunta de factura y Leer      | 1           | 4000        | 16          | 1           | 4000        | “N”                | Se almacena “N”                 |
+| 11   | respuestaFactura = Mayusculas(...)       | 1           | 4000        | 16          | 1           | 4000        | “N”                | Sigue siendo “N”                |
+| 12   | Evaluar `"N" == "S"`                     | 1           | 4000        | 16          | 1           | 4000        | “N”                | Falso                           |
+| 13   | Escribir total                           | 1           | 4000        | 16          | 1           | 4000        | “N”                | Muestra: _Total a pagar: $4000_ |
+
+#### tipo = 2, minutos = 61
 
 |Paso|Instrucción|`tipo`|`tarifa`|`minutos`|`horas`|`total`|`respuestaFactura`|Resultado|
 |---|---|---|---|---|---|---|---|---|
@@ -197,7 +222,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |12|Evaluar `"N" == "S"`|2|2000|61|2|4000|“N”|Falso|
 |13|Escribir total|2|2000|61|2|4000|“N”|Muestra: _Total a pagar: $4000_|
 
-###  tipo = 2, minutos = 120, respuesta = “s”
+#####  tipo = 2, minutos = 120, respuesta = “s”
 
 |Paso|Instrucción|`tipo`|`tarifa`|`minutos`|`horas`|`total`|`respuestaFactura`|Resultado|
 |---|---|---|---|---|---|---|---|---|
@@ -217,7 +242,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |14|total = 4000 / 2|2|2000|120|2|2000|“S”|total = 2000|
 |15|Escribir total|2|2000|120|2|2000|“S”|Muestra: _Total a pagar: $2000_|
 
-### tipo = 1, minutos = 600, respuesta = “S”
+##### tipo = 1, minutos = 600, respuesta = “S”
 
 | Paso | Instrucción                                 | `tipo`      | `tarifa`    | `minutos`   | `horas`     | `total`     | `respuestaFactura` | Resultado                        |
 | ---- | ------------------------------------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------------ | -------------------------------- |
@@ -240,9 +265,10 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 
 
 ---
-# Semaforo.psc
+### 4. [Semaforo](Semaforo.psc)
+Evalúa las unidades disponibles ~~(de un almcén)~~ y muestra un código de color.
 
-## Tabla de decisiones
+#### Tabla de decisiones
 
 | Regla | Unidades < 0 | Unidades == 0 | Unidades <= 10 | Unidades > 10 | Resultado                       |
 | ----- | ------------ | ------------- | -------------- | ------------- | ------------------------------- |
@@ -250,8 +276,8 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | R2    | Falso        | Verdadero     | Falso          | Falso         | Rojo: Agotado                   |
 | R3    | Falso        | Falso         | Verdadero      | Falso         | Amarillo: Bajo                  |
 | R4    | Falso        | Falso         | Falso          | Verdadero     | Verde: Disponible               |
-## Pruebas de escritorio
-### unidades = -1
+#### Pruebas de escritorio
+##### unidades = -1
 
 | Paso | Instrucción                                            | `unidades`  | `unidadesMinimas` | Resultado                                          |
 | ---- | ------------------------------------------------------ | ----------- | ----------------- | -------------------------------------------------- |
@@ -263,7 +289,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 | 6    | Escribir (rama Si)                                     | -1          | 10                | Muestra: _Error: Las unidades deben ser positivas_ |
 | 7    | Fin                                                    | -1          | 10                | Se saltan los SiNo restantes                       |
 
-### unidades = 0
+##### unidades = 0
 
 |Paso|Instrucción|`unidades`|`unidadesMinimas`|Resultado|
 |---|---|---|---|---|
@@ -275,7 +301,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |6|Evaluar `0 == 0`|0|10|Verdadero|
 |7|Escribir (rama Si interna)|0|10|Muestra: _Rojo: No hay stock_|
 
-### unidades = 10
+##### unidades = 10
 
 |Paso|Instrucción|`unidades`|`unidadesMinimas`|Resultado|
 |---|---|---|---|---|
@@ -288,7 +314,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |7|Evaluar `10 <= 10`|10|10|Verdadero|
 |8|Escribir (rama Si más interna)|10|10|Muestra: _Amarillo: Quedan pocas unidades_|
 
-### unidades = 11
+##### unidades = 11
 
 |Paso|Instrucción|`unidades`|`unidadesMinimas`|Resultado|
 |---|---|---|---|---|
@@ -302,19 +328,33 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |8|Escribir (rama SiNo más interna)|11|10|Muestra: _Verde: Hay stock suficiente_|
 
 ---
-# Bisiesto.psc
-## Tabla de decisiones
+### 5. [Bisiesto](Bisiesto.psc)
+Evalúa si un año fue/es/será bisiesto.
 
-| Regla | año % 400 == 0 | año % 100 != 0 | año % 4 == 0 | Resultado      |
-| ----- | -------------- | -------------- | ------------ | -------------- |
-| R1    | Verdadero      | Verdadero      | Verdadero    | Es bisiesto    |
-| R2    | Falso          | Verdadero      | Verdadero    | Es bisiesto    |
-| R3    | Falso          | Falso          | Verdadero    | No es bisiesto |
-| R4    | Falso          | Falso          | Falso        | No es bisiesto |
+#### Tabla de decisiones
 
-## Pruebas de escritorio
+| Regla | año % 400 == 0 | año % 100 != 0 | año % 4 == 0 | año < actual | año == actual | año > actual | Resultado         |
+| ----- | -------------- | -------------- | ------------ | ------------ | ------------- | ------------ | ----------------- |
+| R1    | Verdadero      | Falso (Cien)   | Verdadero    | Verdadero    | Falso         | Falso        | Fue bisiesto      |
+| R2    | Verdadero      | Falso          | Verdadero    | Falso        | Verdadero     | Falso        | Es bisiesto       |
+| R3    | Verdadero      | Falso          | Verdadero    | Falso        | Falso         | Verdadero    | Sería bisiesto    |
+| R4    | Falso          | Verdadero      | Verdadero    | Verdadero    | Falso         | Falso        | Fue bisiesto      |
+| R5    | Falso          | Verdadero      | Verdadero    | Falso        | Verdadero     | Falso        | Es bisiesto       |
+| R6    | Falso          | Verdadero      | Verdadero    | Falso        | Falso         | Verdadero    | Sería bisiesto    |
+| R7    | Falso          | Falso          | Verdadero    | Verdadero    | Falso         | Falso        | No fue bisiesto   |
+| R8    | Falso          | Falso          | Verdadero    | Falso        | Verdadero     | Falso        | No es bisiesto    |
+| R9    | Falso          | Falso          | Verdadero    | Falso        | Falso         | Verdadero    | No sería bisiesto |
+| R10   | Falso          | Verdadero      | Falso        | Verdadero    | Falso         | Falso        | No fue bisiesto   |
+| R11   | Falso          | Verdadero      | Falso        | Falso        | Verdadero     | Falso        | No es bisiesto    |
+| R12   | Falso          | Verdadero      | Falso        | Falso        | Falso         | Verdadero    | No sería bisiesto |
+- **R1-R3:** Años divisibles por 400, 100 y 4: *Bisiestos*
+- **R4-R6**: Años no divisibles por 400, tampoco por 100 pero si por 4: *Bisiestos*
+- **R7-R9**: Años no divisibles por 400 pero si por 100 y 4: *No bisiestos*
+- **R10-R12**: Años no divisibles por 400, 100 ni por 4: *No Bisiestos*
 
-### year = 2024 
+#### Pruebas de escritorio
+
+##### year = 2024 
 
 |Paso|Instrucción|`year`|`verbo`|Resultado|
 |---|---|---|---|---|
@@ -330,7 +370,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |10|`Falso O (Verdadero Y Verdadero)`|2024|“fue”|**Verdadero**|
 |11|Escribir (rama Si)|2024|“fue”|Muestra: _2024 fue bisiesto._|
 
-###  year = 1900
+#####  year = 1900
 
 |Paso|Instrucción|`year`|`verbo`|Resultado|
 |---|---|---|---|---|
@@ -346,7 +386,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |10|`Falso O (Verdadero Y Falso)`|1900|“fue”|**Falso**|
 |11|Escribir (rama SiNo)|1900|“fue”|Muestra: _1900 no fue bisiesto._|
 
-### year = 2026
+##### year = 2026
 
 |Paso|Instrucción|`year`|`verbo`|Resultado|
 |---|---|---|---|---|
@@ -362,7 +402,7 @@ Tablas de decisión y pruebas de escritorio de los algoritmos.
 |10|`Falso O (Falso Y Verdadero)`|2026|“es”|**Falso**|
 |11|Escribir (rama SiNo)|2026|“es”|Muestra: _2026 no es bisiesto._|
 
-###  year = 2400 
+#####  year = 2400 
 
 | Paso | Instrucción                     | `year`      | `verbo`     | Resultado                                       |
 | ---- | ------------------------------- | ----------- | ----------- | ----------------------------------------------- |
