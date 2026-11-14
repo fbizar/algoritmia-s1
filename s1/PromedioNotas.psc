@@ -1,16 +1,13 @@
 Algoritmo GradesAverage
-	Definir sum, average Como Real
-	Definir gradesCount, gradeIndex Como Entero
+	Definir sum, currentGrade, average Como Real
+	Definir gradesCount Como Entero
 	Escribir 'Escribe la cantidad de notas que desea ingresar:'
 	Leer gradesCount
-	Dimensionar grades(gradesCount)
-	gradeIndex <- 1
-	Repetir
+	Para gradeIndex<-1 Hasta gradesCount Con Paso 1 Hacer
 		Escribir 'Ingresa la nota #', gradeIndex, ': '
-		Leer grades[gradeIndex]
-		sum <- sum+grades[gradeIndex]
-		gradeIndex <- gradeIndex+1
-	Hasta Que gradeIndex>gradesCount
+		Leer currentGrade
+		sum <- sum+currentGrade
+	FinPara
 	average <- sum/gradesCount
 	Escribir 'El promedio de las notas es: ', average
 FinAlgoritmo
