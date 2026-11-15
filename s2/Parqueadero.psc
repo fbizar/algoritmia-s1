@@ -21,8 +21,8 @@ Algoritmo Parqueadero
 		Escribir "Minutos que estuvo estacionado: "
 		Leer minutos
 		
-		Si minutos < 0 Entonces
-			Escribir "Los minutos deben ser positivos."
+		Si minutos <= 0 Entonces
+			Escribir "Los minutos deben ser mayores a cero."
 		SiNo
 			
 			horas = trunc((minutos + 59)/60)
@@ -35,7 +35,7 @@ Algoritmo Parqueadero
 				FinSi
 			FinSi
 			
-			Escribir "¿Tienes factura de centro comercial?"
+			Escribir "ï¿½Tienes factura de centro comercial?"
 			Escribir "S = Si, N= No"
 			Leer respuestaFactura
 			respuestaFactura = Mayusculas(respuestaFactura)

@@ -81,3 +81,21 @@ Algoritmo de leer un pedido de un restaurante para generar una factura teniendo 
 Árbol de cajas de la página de canal de YouTube.
 
 ![alt "Arbol de cajas - YouTube"](YouTube_box-tree.svg)
+
+## Laboratorios
+Prácticas y ejercicios de moodle:
+
+### 1. Las cuatro partes de todo ciclo
+![Las cuatro partes de todo ciclo](./laboratorios/lab-1-partes-de-ciclo.png)
+
+### 2. Traza de variables: la venta más grande
+![Traza de variables: la venta más grande](./laboratorios/lab-2-traza-variables.png)
+
+### 3. Calificaciones: cuatro patrones en un recorrido
+![Calificaciones: cuatro patrones en un recorrido](./laboratorios/lab-3-calificaciones.png)
+
+### 4. El total del carrito, descompuesto en funciones
+![El total del carrito, descompuesto en funciones](./laboratorios/lab-4-total-carrito.png)
+
+### 5. ¿Qué patrón necesito?
+![¿Qué patrón necesito?](./laboratorios/lab-5-patron.png)

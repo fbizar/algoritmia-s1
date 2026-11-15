@@ -74,3 +74,21 @@ Calcula el promedio de las notas que el usuario ingrese.
 
 ### 5. [Tinto](tinto.md)
 Algoritmo de cómo preparar un tinto. Presiona el vínculo (título) para abrirlo.
+
+## Laboratorios
+Prácticas y ejercicios de moodle:
+
+### 1. El algoritmo de preparar café
+![El algoritmo de preparar café](./laboratorios/lab-1-algoritmo-cafe.png)
+
+### 2. Los simbolos del diagrama de flujo
+![Los simbolos del diagrama de flujo](./laboratorios/lab-2-simbolos-diagrama.png)
+
+### 3. Positivo, negativo o cero en pseudocódigo
+![Positivo, negativo o cero en pseudocódigo](./laboratorios/lab-3-clasificar-numero.png)
+
+### 4. ¿Paso preciso o ambiguo?
+![¿Paso preciso o ambiguo?](./laboratorios/lab-4-preciso-ambiguo.png)
+
+## Miniretos
+Miniretos semana 1 de Riwi quiz.

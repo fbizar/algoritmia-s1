@@ -414,3 +414,15 @@ Evalúa si un año fue/es/será bisiesto.
 | 6    | Evaluar `2400 Mod 400 == 0` (0) | 2400        | “sería”     | Verdadero                                       |
 | 7    | `Verdadero O (...)`             | 2400        | “sería”     | **Verdadero** (el resto no cambia el resultado) |
 | 8    | Escribir (rama Si)              | 2400        | “sería”     | Muestra: _2400 sería bisiesto._                 |
+
+## Laboratorios
+Prácticas y ejercicios de moodle:
+
+### 1. Prueba de escritorio: el parqueadero
+![El algoritmo de preparar café](./laboratorios/lab-1-prueba-escritorio.png)
+
+### 2. Año bisiesto y semáforo de inventario
+![Año bisiesto y semáforo de inventario](./laboratorios/lab-2-bisiesto-semaforo.png)
+
+### 2. Del lenguaje natural a la condición
+![Del lenguaje natural a la condición](./laboratorios/lab-3-natural-a-condicion.png)
