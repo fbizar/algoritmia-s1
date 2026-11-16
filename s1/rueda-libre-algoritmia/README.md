@@ -6,6 +6,10 @@ el cierre de caja del día.
 ## Algoritmos
 ### Semana 1
 Estos son los algoritmos del reto de la semana.
+- [Algoritmo de ¿Cómo alquilar una bicicleta?](Bitacora.md)
+- [CotizacionBasica](./algoritmos/01_cotizacion_basica.psc)
+- [CotizacionRecorrido](./algoritmos/02_cotizacion_recorrido.psc)
+- [CuentaGrupo](./algoritmos/03_cuenta_grupo.psc)
 
 ## Registro de bitácora
 Puedes ver las pruebas de escritorio y diagramas en [Bitacora.md](Bitacora.md)

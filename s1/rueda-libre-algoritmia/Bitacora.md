@@ -92,7 +92,7 @@ Se ha creado el algoritmo: [CotizacionBasica](./algoritmos/01_cotizacion_basica.
 | ------ | ------- | ---------------------------------------------------- | ---------------------------------------------------- |
 | Felipe | 1 hora  | "Hola, Felipe: tu alquiler de 1 horas cuesta $10000" | "Hola, Felipe: tu alquiler de 1 horas cuesta $10000" |
 | Felipe | 3 horas | "Hola, Felipe: tu alquiler de 3 horas cuesta $30000" | "Hola, Felipe: tu alquiler de 3 horas cuesta $30000" |
-| Bedoya | 8 horas | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" |
+| Felipe | 8 horas | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" |
 
 #### ¿Qué pasa si alguien ingresa 0 o números negativos?
 El algoritmo hara las operaciones sin problema, pero mostraría cosas que no se desean, como que: "tu alquiler de 0 horas cuesta \$0" o "tu alquiler de \-4 horas cuesta \$-40000". 
@@ -137,3 +137,38 @@ Se hizo el algoritmo [CotizacionRecorrido](./algoritmos/02_cotizacion_recorrido.
 1. **Oválo (Rectangulo con esquinas redondeadas)**: Inicio/Fin del algoritmo.
 2. **Rectángulo**: Proceso
 3. **Paralelogramo**: entrada y salida
+
+
+### Día 4 - Asistente de taquilla v0.1: la cuenta del grupo
+#### Descomposición del problema
+**¿Qué ingresa el usuario?**
+| Dato                             | Variable             | Origen               |
+| -------------------------------- | -------------------- | -------------------- |
+| Precio por hora de una bicicleta | `precioHora`         | Constante (10000)    |
+| Cantidad de personas             | `cantidadPersonas`   | Lo digita el usuario |
+| Cantidad de bicicletas           | `cantidadBicicletas` | Lo digita el usuario |
+| Horas de alquiler                | `horas`              | Lo digita el usuario |
+| Precio del recorrido por persona | `precioPersona`      | Lo digita el usuario |
+
+**Lista de cálculos**
+| Orden | Cálculo                                                                         | Fórmula                                                      | Datos que usa                               |
+| ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| 1     | Valor unitario de la bicicleta por el tiempo (se muestra en la columna “Valor”) | `precioHora * horas`                                         | `precioHora`, `horas`                       |
+| 2     | Valor del alquiler                                                              | `cantidadBicicletas * horas * precioHora`                    | `cantidadBicicletas`, `horas`, `precioHora` |
+| 3     | Valor del recorrido                                                             | `precioPersona * cantidadPersonas`                           | `precioPersona`, `cantidadPersonas`         |
+| 4     | Subtotal                                                                        | `valorAlquiler + valorRecorrido`                             | resultados de los pasos 2 y 3               |
+| 5     | Aporte voluntario (10%)                                                         | `subtotal * 0.10`                                            | resultado del paso 4                        |
+| 6     | Total                                                                           | `subtotal + aporteVoluntario`                                | resultados de los pasos 4 y 5               |
+| 7     | Valor por persona (redondeado hacia arriba a múltiplos de 100)                  | `trunc((total / cantidadPersonas + 99.9999999) / 100) * 100` | resultado del paso 6 y `cantidadPersonas`   |
+
+Primero se debe calcular en ese orden el valor del alquiler y el valor del recorrido, porque son las que van a usarse más adeltante en el subtotal, que se usará para calcular el aporte, que permitirá calcular el aporte del 10% para finalmente generar el total y el valor por persona.
+
+
+Se hizo el algoritmo [CuentaGrupo](./algoritmos/03_cuenta_grupo.psc).
+
+#### ¿Cómo funciona el redondeo de 100 hacia arriba?
+`trunc`, e incluso `redon`, solo pueden redondear números decimales. `trunc` los redondea siempre hacia abajo (solo en números positivos), mientras que `redon` lo hace al valor entero más cercano: si la parte decimal es menor a .5, hacia abajo; si es mayor o igual a .5, hacia arriba. Partiendo de esa idea, el precio debía dividirse entre algo para que quedara en decimal, y como debía quedar en centenas, lo hice entre 100; lo siguiente era redondear el resultado y multiplicarlo por 100 otra vez para devolverlo a su escala original.
+
+Como `trunc` siempre redondea hacia abajo, usé `trunc` junto con la suma de `99.9999999` antes de dividir entre 100. Ese valor, casi 100, hace que cualquier resto por encima de un múltiplo de 100 cruce al siguiente múltiplo, mientras que un valor que ya es múltiplo exacto de 100 no sube. Así se logra redondear hacia arriba de forma más consistente que con `redon`, que solo habría subido cuando el resto fuera de 50 o más.
+
+
