@@ -120,3 +120,6 @@ Prácticas y ejercicios de moodle:
 
 ## Miniretos
 Miniretos semana 1 de Riwi quiz.
+
+### [Rueda Libre (Algoritmia)](./rueda-libre-algoritmia/)
+Toda la información de los algoritmos se encuentra en [rueda-libre-algoritmia/README.md](./rueda-libre-algoritmia/README.md). Las pruebas y diagramas de flujo en la [rueda-libre-algoritmia/Bitacora.md](./rueda-libre-algoritmia/Bitacora.md).
