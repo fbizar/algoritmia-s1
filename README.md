@@ -1,5 +1,5 @@
 # Algoritmia - Trayecto 1
-Aquí se encuentran los ejercicios de algoritmia del trayecto 1 dividido por semana.
+Aquí se encuentran los ejercicios de algoritmia del trayecto 1 divididos por semana.
 
 ## Sesiones
 - [Sesión 1](s1)
