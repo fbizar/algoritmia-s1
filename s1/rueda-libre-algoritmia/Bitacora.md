@@ -98,3 +98,42 @@ Se ha creado el algoritmo: [CotizacionBasica](./algoritmos/01_cotizacion_basica.
 El algoritmo hara las operaciones sin problema, pero mostraría cosas que no se desean, como que: "tu alquiler de 0 horas cuesta \$0" o "tu alquiler de \-4 horas cuesta \$-40000". 
 
 Esto se corregirá en la semana 2.
+
+
+### Día 3 - Recorridos guiados\: del pseudocódigo al diagrama de flujo
+
+Se hizo el algoritmo [CotizacionRecorrido](./algoritmos/02_cotizacion_recorrido.psc).
+
+#### Prueba de escritorio
+
+- `nombreRecorrido` = “Sabores de Barrio”
+- `precioPersona` = 60000
+- `cantidadPersonas` = 4
+
+| Paso | Instrucción                                   | `nombreRecorrido`   | `precioPersona` | `cantidadPersonas` | `total`     | `anticipo`  | `saldoPendiente` | Resultado                               |
+| ---- | --------------------------------------------- | ------------------- | --------------- | ------------------ | ----------- | ----------- | ---------------- | --------------------------------------- |
+| 1    | Definir variables                             | (sin valor)         | (sin valor)     | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Se reservan las variables               |
+| 2    | Escribir “Ingresa nombre del recorrido:”      | (sin valor)         | (sin valor)     | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Muestra la solicitud                    |
+| 3    | Leer nombreRecorrido                          | “Sabores de Barrio” | (sin valor)     | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Se almacena el nombre                   |
+| 4    | Escribir “Ingresa el precio por persona:”     | “Sabores de Barrio” | (sin valor)     | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Muestra la solicitud                    |
+| 5    | Leer precioPersona                            | “Sabores de Barrio” | 60000           | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Se almacena 60000                       |
+| 6    | Escribir “Ingresa la cantidad de personas:”   | “Sabores de Barrio” | 60000           | (sin valor)        | (sin valor) | (sin valor) | (sin valor)      | Muestra la solicitud                    |
+| 7    | Leer cantidadPersonas                         | “Sabores de Barrio” | 60000           | 4                  | (sin valor) | (sin valor) | (sin valor)      | Se almacena 4                           |
+| 8    | total = 60000 * 4                             | “Sabores de Barrio” | 60000           | 4                  | 240000      | (sin valor) | (sin valor)      | total = 240000                          |
+| 9    | anticipo = 240000 * 0.3                       | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | (sin valor)      | anticipo = 72000                        |
+| 10   | saldoPendiente = 240000 - 72000               | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | 168000           | saldoPendiente = 168000                 |
+| 11   | Escribir “Recorrido: “, nombreRecorrido       | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | 168000           | Muestra: _Recorrido: Sabores de Barrio_ |
+| 12   | Escribir “Total: $”, total                    | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | 168000           | Muestra: _Total: $240000_               |
+| 13   | Escribir “Anticipo (%30): $”, anticipo        | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | 168000           | Muestra: _Anticipo (%30): $72000_       |
+| 14   | Escribir “Saldo pendiente: $”, saldoPendiente | “Sabores de Barrio” | 60000           | 4                  | 240000      | 72000       | 168000           | Muestra: _Saldo pendiente: $168000_     |
+
+
+#### Diagrama
+
+![Diagrama del algoritmo CotizacionRecorrido](./diagramas/02_cotizacion_recorrido.png)
+
+
+**Simbolos:**
+1. **Oválo (Rectangulo con esquinas redondeadas)**: Inicio/Fin del algoritmo.
+2. **Rectángulo**: Proceso
+3. **Paralelogramo**: entrada y salida
