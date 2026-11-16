@@ -7,6 +7,14 @@ Retos del video de moodle sesión 1 con pruebas.
 ### 1. [Saludo](Saludo.psc)
 Solo muestra el nombre del usuario con un mensaje de bienvenida.
 ![Diagrama de Saludo](diagramas/Saludo.png)
+
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta su nombre y su valor se guarda en la variable de tipo Cadena **userName**.
+>
+> Luego se muestra el mensaje: *Hola, (nombre). Bienvenido a Algoritmia.*
+
 #### Prueba 1
 - **Entrada**: Felipe
 - **Salida**: Hola, Felipe. Bienvenido a Algoritmia
@@ -17,6 +25,12 @@ Solo muestra el nombre del usuario con un mensaje de bienvenida.
 ### 2. [Edad en días](EdadEnDias.psc)
 Algoritmo que muestra la edad aproximada en días.
 ![Diagrama de Edad en días](diagramas/EdadEnDias.png)
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta cuántos años tiene y su valor se guarda en la variable entera **age**. Luego se multiplica por **365** y el resultado se guarda en la variable entera **days**.
+>
+> Finalmente se muestra el mensaje: *Tu edad aproximada en días es: (días)*.
 #### Prueba 1
 - **Entrada**: 22
 - **Salida**:  Tu edad aproximada en días es: 8030
@@ -27,6 +41,14 @@ Algoritmo que muestra la edad aproximada en días.
 ### 3. [Propinas](Propinas.psc)
 Calcula cuanto debe pagar cada persona una cuenta de forma equitativa.
 ![Diagrama de Propinas](diagramas/Propinas.png)
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pide el valor de la cuenta (**billAmount**), el porcentaje de propina (**tipPercentage**), ambos de tipo Real, y la cantidad de personas incluyéndose (**totalPeople**), de tipo Entero.
+>
+> Se calcula la propina (**tipAmount**) como **billAmount × tipPercentage / 100**, el total (**totalAmount**) sumando la cuenta y la propina, y lo que paga cada persona (**amountPerPerson**) dividiendo el total entre **totalPeople**. Todas son variables Real.
+>
+> Por último se muestran los mensajes: *Propina: $(tipAmount)*, *Total a pagar: $(totalAmount)* y *Cada persona debe pagar: $(amountPerPerson)*.
 #### Prueba 1
 - **Entrada**: 
 1. 150000 (cuenta)
@@ -51,6 +73,12 @@ Calcula cuanto debe pagar cada persona una cuenta de forma equitativa.
 ### 4. [Promedio Notas](PromedioNotas.psc)
 Calcula el promedio de las notas que el usuario ingrese. 
 ![Diagrama de Promedio Notas](diagramas/PromedioNotas.png)
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta cuántas notas desea ingresar y su valor se guarda en la variable entera **gradesCount**. Luego, con un ciclo **Para**, se le pide cada nota y se va sumando en la variable **sum**.
+>
+> Al terminar, se calcula el promedio dividiendo **sum / gradesCount** y se muestra el mensaje: *El promedio de las notas es: (promedio)*.
 #### Prueba 1
 - **Entrada**: 
 1. 3 (cantidad de notas)
