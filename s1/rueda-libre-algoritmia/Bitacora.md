@@ -74,3 +74,27 @@
 24. Verifica que tienes el candado y su llave (o clave).
 25. Sal del local con la bicicleta, el casco y el candado.
 26. Fin.
+
+
+## Día 2 - La primera cotización en PSeInt
+
+### Tabla
+| Entrada               | Proceso                    | Salida                                    |
+| --------------------- | -------------------------- | ----------------------------------------- |
+| nombreCliente (Texto) | -                          | Imprime: nombreCliente <br>(e.g  Emanuel) |
+| horas (Entero)        | total = horas \* valorHora | Imprime: total<br>(e.g 40000)             |
+
+Se ha creado el algoritmo: [CotizacionBasica](./algoritmos/01_cotizacion_basica.psc)
+### Observaciones del algoritmo 
+
+#### Casos de prueba
+| Nombre | Hora    | Resultado esperado                                   | Resultado obtenido                                   |
+| ------ | ------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| Felipe | 1 hora  | "Hola, Felipe: tu alquiler de 1 horas cuesta $10000" | "Hola, Felipe: tu alquiler de 1 horas cuesta $10000" |
+| Felipe | 3 horas | "Hola, Felipe: tu alquiler de 3 horas cuesta $30000" | "Hola, Felipe: tu alquiler de 3 horas cuesta $30000" |
+| Bedoya | 8 horas | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" | "Hola, Felipe: tu alquiler de 8 horas cuesta $80000" |
+
+#### ¿Qué pasa si alguien ingresa 0 o números negativos?
+El algoritmo hara las operaciones sin problema, pero mostraría cosas que no se desean, como que: "tu alquiler de 0 horas cuesta \$0" o "tu alquiler de \-4 horas cuesta \$-40000". 
+
+Esto se corregirá en la semana 2.
