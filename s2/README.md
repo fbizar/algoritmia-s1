@@ -6,6 +6,12 @@ Algoritmos en PSeInt con tablas de decisión y pruebas de algoritmos.
 
 ### 1. [Validar Registro](ValidarRegistro.psc)
 Comprueba que el usuario tiene 14 años o más, y acepta los términos para permitir el registro.
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta que digite su edad y su valor se guarda en la variable entera **edad**. Luego se le pregunta si acepta los términos y condiciones escribiendo "S" para sí o "N" para no. Su entrada se guarda en la variable **respuesta** de tipo Caracter y se convierte en mayúsculas para no haber distinción si fue ingresado en minúsculas.
+>
+> Si **edad >= 14** y **respuesta** es **"S"**, mostrará el mensaje: *Registro exitoso*. De lo contrario mostrará: *No puedes registrate*.
 
 #### Tabla de decisiones
 
@@ -82,7 +88,12 @@ Comprueba que el usuario tiene 14 años o más, y acepta los términos para perm
 ---
 ### 2. [Validar Edad](ValidarEdad.psc)
 Verifica si una edad ingresada está entre 0 y 120 para ser considerada válida.
-
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta que digite su edad y su valor se guarda en la variable entera **edad**.
+>
+> Si **edad >= 0** y **edad <= 120**, mostrará el mensaje: *La edad es válida.* De lo contrario mostrará: *La edad debe ser mayor o igual a 0 y menor igual a 120.*
 #### Tabla de decisiones
 
 | Regla | Edad >= 0 | Edad <= 120 | Resultado      |
@@ -130,7 +141,16 @@ Verifica si una edad ingresada está entre 0 y 120 para ser considerada válida.
 ---
 ### 3. [Parqueadero](Parqueadero.psc)
 Algoritmo de una taquilla de parqueadero que calcula el valor según el tipo de vehículo, tiempo estacionado y si contine factura para aplicar un descuento.
-
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta el tipo de vehículo (**1** = Carro, **2** = Moto) y su valor se guarda en la variable entera **tipo**. Si no es 1 ni 2, mostrará: *El tipo debe ser 1 o 2*. En caso contrario, la **tarifa** por hora será **4000** para carro o **2000** para moto.
+>
+> Luego se preguntan los minutos estacionados, guardados en la variable entera **minutos**. Si **minutos <= 0**, mostrará: *Los minutos deben ser mayores a cero.*
+>
+> De lo contrario, las **horas** (fracción) se calculan dividiendo los minutos entre 60 y extrayendo la parte entera del resultado. Si **minutos <= 15** el **total** es 0; si no, es **tarifa × horas** con un máximo de **tarifaMaxima** (30000). Después se pregunta si tiene factura de centro comercial, guardado en la variable **respuestaFactura** de tipo Caracter y convertido en mayúsculas; si es **"S"**, el total se divide a la mitad.
+>
+> Finalmente se muestra el mensaje: *Total a pagar: $(total)*.
 #### Tabla de decisiones
 
 | Regla | Tipo     | Minutos           | Factura    | Resultado                                          |
@@ -267,7 +287,12 @@ Algoritmo de una taquilla de parqueadero que calcula el valor según el tipo de 
 ---
 ### 4. [Semaforo](Semaforo.psc)
 Evalúa las unidades disponibles ~~(de un almcén)~~ y muestra un código de color.
-
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta el número de unidades disponibles y su valor se guarda en la variable entera **unidades**. La variable entera **unidadesMinimas** vale **10**.
+>
+> Si **unidades < 0**, mostrará: *Error: Las unidades deben ser positivas*. Si **unidades == 0**, mostrará: *Rojo: No hay stock*. Si **unidades <= unidadesMinimas**, mostrará: *Amarillo: Quedan pocas unidades*. En cualquier otro caso mostrará: *Verde: Hay stock suficiente*.
 #### Tabla de decisiones
 
 | Regla | Unidades < 0 | Unidades == 0 | Unidades <= 10 | Unidades > 10 | Resultado                       |
@@ -330,7 +355,12 @@ Evalúa las unidades disponibles ~~(de un almcén)~~ y muestra un código de col
 ---
 ### 5. [Bisiesto](Bisiesto.psc)
 Evalúa si un año fue/es/será bisiesto.
-
+> [!NOTE]
+> **Explicación**
+>
+> Al usuario se le pregunta que escriba un año y su valor se guarda en la variable entera **year**. Según su valor, la variable **verbo** de tipo Caracter toma **"sería"** si **year > 2026**, **"fue"** si **year < 2026** o **"es"** si es igual a 2026.
+>
+> Si **year** es divisible entre 400, o es divisible entre 4 pero no entre 100, mostrará el mensaje: *(year) (verbo) bisiesto.* De lo contrario mostrará: *(year) no (verbo) bisiesto.*
 #### Tabla de decisiones
 
 | Regla | año % 400 == 0 | año % 100 != 0 | año % 4 == 0 | año < actual | año == actual | año > actual | Resultado         |
